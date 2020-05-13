@@ -1,0 +1,98 @@
+<div><!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <title>GeoJSONLayer - 4.15</title>
+
+    <style>
+      html,
+      body,
+      #viewDiv {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+
+    <link
+      rel="stylesheet"
+      href="https://js.arcgis.com/4.15/esri/themes/light/main.css"
+    />
+    <script src="https://js.arcgis.com/4.15/"></script>
+
+    <script>
+      require([
+        "esri/Map",
+        "esri/layers/GeoJSONLayer",
+        "esri/views/MapView"
+      ], function(Map, GeoJSONLayer, MapView) {
+        // If GeoJSON files are not on the same domain as your website, a CORS enabled server
+        // or a proxy is required.
+        
+		const url =
+          "https://covid19.bioviaonline.com/webapps/covid19/biomedtechrapidresponse/nychealth.geojson";
+
+        const template = {
+          title: "COVID-19 Testing Info for {zipcode}",
+          content: "{positive} tests positive out of {total}"
+        };
+
+        var renderer = {
+          type: "simple",
+          field: "positive",
+          symbol: {
+            type: "simple-marker",
+            color: "orange",
+            outline: {
+              color: "white"
+            }
+          },
+          visualVariables: [
+            {
+              type: "size",
+              field: "positive",
+              stops: [
+                {
+                  value: 0,
+                  size: "4px"
+                },
+                {
+                  value: 1000,
+                  size: "40px"
+                }
+              ]
+            }
+          ]
+        };
+
+        var geojsonLayer = new GeoJSONLayer({
+          url: url,
+          popupTemplate: template,
+          renderer: renderer //optional
+        });
+
+        var map = new Map({
+          basemap: "gray",
+          layers: [geojsonLayer]
+        });
+
+        var view = new MapView({
+          container: "viewDiv",
+		  //Center on New York City
+          center: [-73.98466692960223, 40.73323040245506],
+          zoom: 12,
+          map: map
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="viewDiv"></div>
+  </body>
+</html></div>
