@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="http://faculty.baruch.cuny.edu/geoportal/metadata/bcgis_dcxml.css"?>
+<metadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="http://faculty.baruch.cuny.edu/geoportal/metadata/bcgis_dc_schema.xsd">
+<title>NYC Geodatabase</title>
+<creator>Frank Donnelly</creator>
+<subject>boundaries</subject>
+<subject>economy</subject>
+<subject>health</subject>
+<subject>society</subject>
+<subject>structure</subject>
+<subject>transportation</subject>
+<description>The NYC Geodatabase is a spatial database created by the GIS Lab at Baruch College CUNY for basic geographic analysis and thematic mapping within the five boroughs of New York City. It contains geographic features and data compiled from several public sources. Subsets of large features like water, greenspace, and public facilities were created and census geographies like tracts, ZCTAs, and PUMAs were geoprocessed to create land-based boundaries. Census data from the 2010 Census, American Community Survey (ACS), and ZIP Code Business Patterns are stored in tables that can be easily related to geographic features. Transit and public facility point data were gathered from several city agencies and transformed into spatial data that can be used for reference or analysis for measuring distance, drawing buffers, or counting features within areas. While the database contains many foundational map layers and tabular data that can be readily used, it was also constructed so users could build on that foundation and extend it for their own projects. All of the boundaries are based on the 2010 Census TIGER shapefiles, which allows users to easily add additional layers from that series or to extend the study area beyond the five boroughs. The database also serves as an educational tool for introducing spatial databases and SQL. The data is appropriate for thematic and reference mapping at a city and borough level and for thematic mapping at a sub-borough level. While it can be used for creating reference maps at a sub-borough level, it is not ideal for this purpose given the degree of generalization in the TIGER Line files (in terms of the detail of the line work for the coast line and the number of water and landmark features selected for inclusion). All of the features were transformed to share a common coordinate reference system that is appropriate for the area.</description>
+<publisher>Newman Library (Bernard M. Baruch College)</publisher>
+<contributor>Ryan Lennon</contributor>
+<issued>2020-01</issued>
+<type>Dataset</type>
+<format>SQLite Database</format>
+<format>Geodatabase</format>
+<medium>Mixed</medium>
+<identifier>nyc_gdb_jan2020</identifier>
+<identifier>https://www.baruch.cuny.edu/confluence/display/geoportal/NYC+Geodatabase</identifier>
+<source>US Census Bureau, TIGER / Line Shapefiles</source>
+<source>US Census Bureau, 2010 Census Centers of Population</source>
+<source>NYC Department of City Planning, Facilities Database (FacDB)</source>
+<source>MTA NYC Transit, Data Feeds</source>
+<source>Port Authority of NY NJ, Annual Report</source>
+<source>US Census Bureau, 2010 Census</source>
+<source>US Census Bureau, 2014-2018 American Community Survey</source>
+<source>US Census Bureau, 2017 ZIP Code Business Patterns</source>
+<language>English</language>
+<isPartOf>NYC Geodatabase Jan 2020</isPartOf>
+<coverage>New York City, New York, United States</coverage>
+<coverage>Bronx County, New York, United States</coverage>
+<coverage>Kings County, New York, United States</coverage>
+<coverage>New York County, New York, United States</coverage>
+<coverage>Queens County, New York, United States</coverage>
+<coverage>Richmond County, New York, United States</coverage>
+<coverage>Borough of Bronx, New York, United States</coverage>
+<coverage>Borough of Brooklyn, New York, United States</coverage>
+<coverage>Borough of Manhattan, New York, United States</coverage>
+<coverage>Borough of Queens, New York, United States</coverage>
+<coverage>Borough of Staten Island, New York, United States</coverage>
+<spatial>name=New York City,New York,United States;northlimit=272752.873521;eastlimit=1067309.746197;southlimit=120053.504637;westlimit=913090.689878;units=ft;projection=NAD83 / New York Long Island (ftUS);</spatial>
+<temporal>2018</temporal>
+<rights>Public</rights>
+<license>Creative Commons Attribution-NonCommercial-ShareAlike CC BY-NC-SA</license>
+<license>https://creativecommons.org/licenses/by-nc-sa/4.0/</license>
+<provenance>Baruch CUNY</provenance>
+<accrualperiodicity>Semiannual</accrualperiodicity>
+</metadata>
