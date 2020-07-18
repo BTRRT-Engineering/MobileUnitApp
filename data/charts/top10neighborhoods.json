@@ -1,3 +1,6 @@
-﻿[
-{"neighborhood":["Corona/North Corona","Cypress Hills/East New York","Allerton/Norwood/Pelham Parkway/Williamsbridge","Elmhurst","Borough Park","Jamaica","Allerton/Baychester/Pelham Gardens/Williamsbridge","East Harlem","Fordham/Kingsbridge/University Heights","Canarsie"],"data":[4877,4815,3627,3382,3196,3181,3155,2977,2949,2886],"name":"Total Cases"}
+﻿[{
+        "neighborhood": ["Corona/North Corona", "Cypress Hills/East New York", "Allerton/Norwood/Pelham Parkway/Williamsbridge", "Elmhurst", "Borough Park", "Jamaica", "Allerton/Baychester/Pelham Gardens/Williamsbridge", "East Harlem", "Fordham/Kingsbridge/University Heights", "Canarsie"],
+        "data": [4877, 4815, 3627, 3382, 3196, 3181, 3155, 2977, 2949, 2886],
+        "name": "Total Cases"
+    }
 ]
